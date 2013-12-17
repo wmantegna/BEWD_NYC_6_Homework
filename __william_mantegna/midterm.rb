@@ -8,8 +8,6 @@ class Brew
 	attr_accessor :b, :styles, :style_count, :beers, :beer_count
 	attr_accessor :style_num, :style_name
 
-	attr_accessor :dudes
-	
 	def initialize
 		puts ""
 		puts "----------------------------"
@@ -196,6 +194,7 @@ class Brew
 	end
 
 #-------------------------------------------------------------------
+# 				Code below here was for initial testing only
 #-------------------------------------------------------------------
 
 	def getBeers
