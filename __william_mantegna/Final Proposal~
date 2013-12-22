@@ -1,0 +1,112 @@
+Mission Statement
+------------------------------------
+I have a dream, that one day brewers everywhere will have the ability to easily share data about their brews across the World Wide Web!
+
+Core Functionality
+------------------------------------
+--Menu:
+	User Profile Page
+	Search (users/beers)
+	About Us
+	Resources
+	
+--User Profile Page: 
+	DisplayName (screen name)
+	Total beers made
+	Favorites section (beer, beer style, food, bar)
+	Links to other brewing-related accounts
+	List of last 5 beers a brewer has made (with link to all beers a user has logged)
+
+--Beer Profile Page: Displays information about each brew, as logged by the user.
+	Name
+	Style
+	Brew Set-up (drop-down: Extract, Partial-mash, All-Grain)
+	Recipe: (Link)
+	Original Gravity (OG)
+	Final Gravity (FG)
+	ABV ( ~ can be calculated on back-end)
+	Date Brewed
+	Racking Dates (optional)
+	Priming Process
+	Date Bottled
+	Brewer Rating
+	
+--Resources Page: Search feature to find information on each style of beer
+	--Interface with BreweryDB (database will be downloaded, and I will write functions to improve the ability to sort through the data in this database)
+	--OR Interface with RateBeer.com API
+
+--'About Us' Page: Displays information about this project, starting with the mission statement above.
+
+
+(after core functionality is built)
+Desirable Features:
+------------------------------------
+--User Profile Picture
+--Profile Photo for each beer that relates to the style of beer selected
+--Ability to upload a photo for each Beer
+--Resources Page Expansion: List other websites / links to pages that have useful information for every brewer
+	--Priming sugar calculator's
+	--Forum's (HomeBrewTalk)
+	--Recipes (BrewToad)
+	--Popular blogs
+--External Sharing: Users can share a new brew via Twitter/Facebook (maybe instagram?)
+
+
+Models
+------------------------------------
+Users
+	email:string
+	password:string
+	screenName:string
+	totalBeers:integer
+	favBeer:string
+	favBeerStyle:string
+	favFood:string
+	favFoodStyle:string
+	homeBrewTalk:string
+	brewToad:string
+	Untappd:string
+Beers
+	Name:string
+	Style:ID (FK to BeerStyles)
+	brewSetup:ID
+	Recipe:string
+	OG:float
+	FG:float
+	ABV:float
+	DateBrewed:datetime
+	Priming:text
+	DateBottled:datetime
+	BrewerRating:float
+	BrewerComments:text
+
+BeerStyles
+	name:string
+	category:string
+	description:text
+	abvMin:float
+	abvMax:float
+	ibuMin:float
+	ibuMax:float
+	ogMin:float
+	ogMax:float
+	fgMin:float
+	fgMax:float
+	srmMin:float
+	srmMax:float
+
+
+Development Milestones:
+------------------------------------
+#1 = Rails project, Git repo, homepage, basic menu with working links to basic pages
+#2 = User model & controller, Create new account, log-in, profile page
+#3 = Beer model, Create a new beer, beer profile page
+#4 = functions for each model so that user/beer information can be viewed
+
+Features That I won't have time for until after BEWD
+------------------------------------
+--Beer Page ~ Recipe:
+	Expand this from a simple link to a view into 
+--Feature Requests/User Feedback System
+--Badge system: Similar to FourSquare, Untappd, etc
+--Find a Homebrew Store near you: Interface with Google Maps to search for the closest homebrew store to the user

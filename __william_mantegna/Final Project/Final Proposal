@@ -1,0 +1,81 @@
+Mission Statement
+------------------------------------
+I have a dream, that one day brewers everywhere will have the ability to easily share data about their brews across the World Wide Web!
+
+Core Functionality
+------------------------------------
+--Menu:
+	User Profile Page
+	Search (users/beers)
+	About Us
+	Resources
+	
+--User Profile Page: 
+	DisplayName (screen name)
+	Total beers made
+	Favorites section (beer, beer style, food, bar)
+	Links to other brewing-related accounts
+	List of last 5 beers a brewer has made (with link to all beers a user has logged)
+
+--Beer Profile Page: Displays information about each brew, as logged by the user.
+	Name
+	Style
+	Brew Set-up (drop-down: Extract, Partial-mash, All-Grain)
+	Recipe: (Link)
+	Original Gravity (OG)
+	Final Gravity (FG)
+	ABV ( ~ can be calculated on back-end)
+	Date Brewed
+	Racking Dates (optional)
+	Priming Process
+	Date Bottled
+	Brewer Rating
+	
+--Resources Page: Search feature to find information on each style of beer
+	--Interface with BreweryDB (database will be downloaded, and I will write functions to improve the ability to sort through the data in this database)
+	--OR Interface with RateBeer.com API
+
+--'About Us' Page: Displays information about this project, starting with the mission statement above.
+
+
+(after core functionality is built)
+Desirable Features:
+------------------------------------
+--User Profile Picture
+--Profile Photo for each beer that relates to the style of beer selected
+--Ability to upload a photo for each Beer
+--Resources Page Expansion: List other websites / links to pages that have useful information for every brewer
+	--Priming sugar calculator's
+	--Forum's (HomeBrewTalk)
+	--Recipes (BrewToad)
+	--Popular blogs
+--External Sharing: Users can share a new brew via Twitter/Facebook (maybe instagram?)
+
+
+Development Milestones:
+------------------------------------
+Core Functionality
+------------------
+#1 = Rails project, Git repo, homepage, basic menu with working links to basic pages
+#2 = User model & controller, CRUD for User (scoped to each user's data), log-in/-out, profile page
+#3 = Styles model (& 1 row of dummy data), Beers model, CRUD for Styles and Beer (scoped where necessary), Create a new beer, beer profile page
+#4 = Specific functions for each model so that user/beer information can be viewed
+#5 = Replace dummy Styles with breweryDB styles
+
+Desirable Features
+------------------
+#1 = Figure out uploading photos (maybe us a 3rd party)
+#2 = User Profile Photo
+#3 = Beer Profile Photo
+#4 = Resources Expansion
+#5 = UI improvements using CSS
+#6 = External Sharing
+#7 = UI/front-end funcationality improvements using JQuery/AJAX
+
+Features That I won't have time for until after BEWD
+------------------------------------
+--Beer Page ~ Recipe:
+	Expand this from a simple link to a view into 
+--Feature Requests/User Feedback System
+--Badge system: Similar to FourSquare, Untappd, etc
+--Find a Homebrew Store near you: Interface with Google Maps to search for the closest homebrew store to the user

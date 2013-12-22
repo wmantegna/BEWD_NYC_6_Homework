@@ -1,0 +1,43 @@
+Models
+------------------------------------
+Users
+	email:string
+	password:string
+	screenName:string
+	totalBeers:integer
+	favBeer:string
+	favBeerStyle:string
+	favFood:string
+	favFoodStyle:string
+	homeBrewTalk:string
+	brewToad:string
+	Untappd:string
+Beers
+	Name:string
+	Style:ID (FK to BeerStyles)
+	brewSetup:ID
+	Recipe:string
+	OG:float
+	FG:float
+	ABV:float
+	DateBrewed:datetime
+	Priming:text
+	DateBottled:datetime
+	BrewerRating:float
+	BrewerComments:text
+
+BeerStyles
+	name:string
+	category:string
+	description:text
+	abvMin:float
+	abvMax:float
+	ibuMin:float
+	ibuMax:float
+	ogMin:float
+	ogMax:float
+	fgMin:float
+	fgMax:float
+	srmMin:float
+	srmMax:float
+
