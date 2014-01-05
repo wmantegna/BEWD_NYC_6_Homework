@@ -1,4 +1,7 @@
 <h1>Welcome to Instaflix! See our collection of movies below</h1>
+
+<%= link_to "Add a movie", new_movie_path %>
+
 <table>
 	<tr>
 		<th>title</th>
@@ -9,9 +12,10 @@
 	<% @movies.each do |m| %>
 	
 	<tr>
-		<td><%= m.title %></td>
+		<td><%= link_to m.title, movie_path(m) %></td>
 		<td><%= m.description %></td>
 		<td><%= m.year_released %></td>
+		<td><%= link_to "Destroy", movie_path(m), method: :delete, data: {confirm: "Are you sure?"} %></td>
 	</tr>
 	
 	<% end %>
