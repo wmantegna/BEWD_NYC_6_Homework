@@ -1,0 +1,26 @@
+<h1><%= @post.title %></h1>
+<p><%= @post.content %></p>
+<%= link_to "Home", root_path %>
+
+<hr />
+
+<h3>Comments</h3>
+<% @post.comments.each do |c| %>
+	<p><b><%= c.email %>:</b> <%= c.content %></p>
+<% end%>
+<br />
+
+
+<div style="background-color:#bbb; width: 250px; padding: 10px">
+<b style="font-size: 18px; align: center">Add a Comment</b>
+<%= form_for [@post, @comment] do |f| %>
+	
+	<b><%= f.label :email %></b>
+	<%= f.text_field :email %><br />
+
+	<b><%= f.label :content %></b>
+	<%= f.text_area :content %><br />
+
+	<%= f.submit %>
+<% end %>
+</div>

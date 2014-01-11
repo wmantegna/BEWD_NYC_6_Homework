@@ -1,0 +1,7 @@
+<%= form_for([@post, @comment]) do |f| %>
+<%= f.label :email %>
+<%= f.text_field :email %><br />
+
+<%= f.label :content %>
+<%= f.text_area :content %><br />
+<% end %>

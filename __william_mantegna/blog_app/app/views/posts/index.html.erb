@@ -1,0 +1,24 @@
+<h1>Bill's Blog_app</h1>
+
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Content</th>
+		<th>Links</th>
+<% @posts.each do |p| %>
+	<tr>
+		<th><%= p.title %></th>
+		<td><%= p.content %></td>
+		<td>
+			<%= link_to "View", post_path(p) %>
+			<%= link_to "Edit", edit_post_path(p) %>
+			<%= link_to "Destory", p, method: :delete, data: { confirm: "Are you sure?" } %>
+		</td>
+	</tr>
+<% end %>
+</table>
+
+<p><%= link_to "Create a new post", new_post_path %></p>
+
+<hr>
+Page served at <%= Time.now %>
