@@ -1,0 +1,30 @@
+<h1>Add a Beer</h1>
+
+<%= form_for @beer do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %><br />
+
+	<%= f.label :beer_style %>
+	<%= select("beer", "beer_style", BeerStyle.all.collect { |bs| [bs.name, bs.id] } ) %><br />
+
+	<%= f.label :recipe %>
+	<%= f.text_field :recipe %><br />
+	<%= f.label :og %>
+	<%= f.text_field :fg %><br />
+	<%= f.label :abv %>
+	<%= f.text_field :abv %><br />
+	<%= f.label :dateBrewed %>
+	<%= f.text_field :dateBrewed %><br />
+	<%= f.label :dateBottled %>
+	<%= f.text_field :dateBottled %><br />
+	<%= f.label :priming %>
+	<%= f.text_field :priming %><br />
+	<%= f.label :rating %>
+	<%= f.text_field :rating %><br />
+	<%= f.label :brewerComment %>
+	<%= f.text_field :brewerComment %><br />
+
+	<%= f.submit %>
+<% end %>
+<br />
+<%= link_to "To Beers homepage", beers_path %>

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  style: 
+  recipe: MyString
+  og: 1.5
+  fg: 1.5
+  abv: 1.5
+  dateBrewed: 2014-01-12 23:40:34
+  priming: MyString
+  dateBottled: 2014-01-12 23:40:34
+  brewerRating: 1.5
+  brewerComment: MyText
+
+two:
+  name: MyString
+  style: 
+  recipe: MyString
+  og: 1.5
+  fg: 1.5
+  abv: 1.5
+  dateBrewed: 2014-01-12 23:40:34
+  priming: MyString
+  dateBottled: 2014-01-12 23:40:34
+  brewerRating: 1.5
+  brewerComment: MyText

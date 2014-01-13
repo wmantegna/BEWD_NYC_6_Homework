@@ -1,9 +1,9 @@
 Fermently::Application.routes.draw do
   
   resources :beer_styles
-  get "beers/index"
+  resources :beers
 
-  root "beer_styles#index"
+  root "beers#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140113022254) do
+ActiveRecord::Schema.define(version: 20140113044034) do
 
   create_table "beer_styles", force: true do |t|
     t.string   "name"
@@ -27,6 +27,22 @@ ActiveRecord::Schema.define(version: 20140113022254) do
     t.float    "fgMax"
     t.float    "srmMin"
     t.float    "srmMax"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "beers", force: true do |t|
+    t.string   "name"
+    t.integer  "beer_style_id"
+    t.float    "og"
+    t.float    "fg"
+    t.float    "abv"
+    t.datetime "dateBrewed"
+    t.datetime "dateBottled"
+    t.string   "priming"
+    t.string   "recipe"
+    t.float    "rating"
+    t.text     "brewerComment"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
