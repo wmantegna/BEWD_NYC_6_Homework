@@ -1,0 +1,44 @@
+<h1>Edit a Beer Style</h1>
+
+<%= form_for @beerStyle do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %><br />
+
+	<%= f.label :category %>
+	<%= f.text_field :category %><br />
+
+	<%= f.label :description %>
+	<%= f.text_field :description %><br />
+
+	<%= f.label :abvMin %>
+	<%= f.text_field :abvMin %><br />
+
+	<%= f.label :abvMax %>
+	<%= f.text_field :abvMax %><br />
+
+	<%= f.label :ibuMin %>
+	<%= f.text_field :ibuMin %><br />
+
+	<%= f.label :ibuMax %>
+	<%= f.text_field :ibuMax %><br />
+
+	<%= f.label :ogMin %>
+	<%= f.text_field :ogMin %><br />
+
+	<%= f.label :ogMax %>
+	<%= f.text_field :ogMax %><br />
+
+	<%= f.label :fgMin %>
+	<%= f.text_field :fgMin %><br />
+
+	<%= f.label :fgMax %>
+	<%= f.text_field :fgMax %><br />
+
+	<%= f.label :srmMin %>
+	<%= f.text_field :srmMin %><br />
+
+	<%= f.label :srmMax %>
+	<%= f.text_field :srmMax %><br />
+
+	<%= f.submit %>
+<% end %>

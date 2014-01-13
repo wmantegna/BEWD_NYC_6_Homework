@@ -1,0 +1,63 @@
+<h1><%= @beerStyle.name %></h1>
+
+<%= link_to "Edit", edit_beer_style_path %>
+<table>
+	<tr>
+		<th>Category</th>
+		<td><%= @beerStyle.category %></td>
+	</tr>
+	<tr>
+		<th>description</th>
+		<td><%= @beerStyle.description %></td>
+	</tr>
+	<tr>
+		<th>abvMin</th>
+		<td><%= @beerStyle.abvMin %></td>
+	</tr>
+	<tr>
+		<th>abvMax</th>
+		<td><%= @beerStyle.abvMax %></td>
+	</tr>
+	<tr>
+		<th>ibuMin</th>
+		<td><%= @beerStyle.ibuMin %></td>
+	</tr>
+	<tr>
+		<th>ibuMax</th>
+		<td><%= @beerStyle.ibuMax %></td>
+	</tr>
+	<tr>
+		<th>ogMin</th>
+		<td><%= @beerStyle.ogMin %></td>
+	</tr>
+	<tr>
+		<th>ogMax</th>
+		<td><%= @beerStyle.ogMax %></td>
+	</tr>
+	<tr>
+		<th>fgMin</th>
+		<td><%= @beerStyle.fgMin %></td>
+	</tr>
+	<tr>
+		<th>fgMax</th>
+		<td><%= @beerStyle.fgMax %></td>
+	</tr>
+	<tr>
+		<th>srmMin</th>
+		<td><%= @beerStyle.srmMin %></td>
+	</tr>
+	<tr>
+		<th>srmMax</th>
+		<td><%= @beerStyle.srmMax %></td>
+	</tr>
+	<tr>
+		<th>Created At</th>
+		<td><%= @beerStyle.created_at %></td>
+	</tr>
+	<tr>
+		<th>Updated At</th>
+		<td><%= @beerStyle.updated_at %></td>
+	</tr>
+</table>
+<br />
+<%= link_to "Beer Styles Home", beer_styles_path %>

@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  category: MyString
+  description: MyString
+  abvMin: 1.5
+  abvMax: 1.5
+  ibuMin: 1.5
+  ibuMax: 1.5
+  ogMin: 1.5
+  ogMax: 1.5
+  fgMin: 1.5
+  fgMax: 1.5
+  srmMin: 1.5
+  srmMax: 1.5
+
+two:
+  name: MyString
+  category: MyString
+  description: MyString
+  abvMin: 1.5
+  abvMax: 1.5
+  ibuMin: 1.5
+  ibuMax: 1.5
+  ogMin: 1.5
+  ogMax: 1.5
+  fgMin: 1.5
+  fgMax: 1.5
+  srmMin: 1.5
+  srmMax: 1.5
