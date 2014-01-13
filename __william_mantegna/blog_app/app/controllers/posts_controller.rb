@@ -32,6 +32,10 @@ class PostsController < ApplicationController
 
   def destroy
   	@post = Post.find(params[:id])
+
+    @post.comments.each do |c|
+      c.destroy
+    end
   	@post.destroy
 
   	redirect_to root_path
