@@ -1,2 +1,20 @@
 <h1>Beers#show</h1>
 <p>Find me in app/views/beers/show.html.erb</p>
+
+
+<b>Name:</b> <%= @beer.name %><br />
+<b>Beer Style:</b> <%= link_to @beer.beer_style.name, beer_style_path(@beer.beer_style) %><br />
+<b>Recipe:</b> <%= @beer.recipe %><br />
+<b>OG:</b> <%= @beer.og %><br />
+<b>FG:</b> <%= @beer.fg %><br />
+<b>ABV:</b> <%= @beer.abv %><br />
+<b>Date Brewed:</b> <%= @beer.dateBrewed %><br />
+<b>Date Bottled:</b> <%= @beer.dateBottled %><br />
+<b>Priming:</b> <%= @beer.priming %><br />
+<b>Rating:</b> <%= @beer.rating %><br />
+<b>Brewer Comment:</b> <%= @beer.brewerComment %><br />
+<b>Created At:</b> <%= @beer.created_at %><br />
+<b>Updated At:</b> <%= @beer.updated_at %><br />
+<br />
+<p><%= link_to "Edit Beer", edit_beer_path %></p>
+<p><%= link_to "List of All Beer", beers_path %></p>

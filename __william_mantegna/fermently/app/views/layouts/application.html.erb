@@ -7,6 +7,40 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+	<table width=100% cellspacing=0>
+		<tr>
+			<td>
+				<h1>Fermently</h1>
+				<%= link_to "Home", root_path %> | 
+				<%= link_to "Beers", beers_path %> | 
+				<%= link_to "Beer Styles", beer_styles_path %> | 
+				<%= link_to "About us", "/about.html" %>
+			</td>
+			<td>
+				<div align="right">
+					<br />
+					<br />
+					
+					<% if user_signed_in? %>	
+						<br />
+						Hello <%= current_user.email %> | <%= current_user.id %><br />
+						<%= link_to "Log out", destroy_user_session_path, method: :delete %>
+					<% else %>
+						<%= link_to "Login", new_user_session_path %><br />	
+						<%= link_to "Sign up", new_user_registration_path %>
+					<% end %>
+
+				</div>
+			</td>
+		</tr>
+	</table>
+	<hr />
+</header>
+
+<p style="color:red;"><%= flash[:error] %></p>
+<p style="color:green;"><%= notice %></p>
+<p class="color:red;"><%= alert %></p>
 
 <%= yield %>
 

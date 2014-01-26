@@ -1,2 +1,34 @@
 <h1>Beers#edit</h1>
 <p>Find me in app/views/beers/edit.html.erb</p>
+
+
+<%= form_for @beer do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %><br />
+
+	<%= f.label :beer_style %>
+	
+	<%= f.collection_select :beer_style_id, BeerStyle.all, :id, :name, prompt: "Beer Style" %><br />
+	<%= f.label :recipe %>
+	<%= f.text_field :recipe %><br />
+	<%= f.label :og %>
+	<%= f.text_field :og %><br />
+	<%= f.label :fg %>
+	<%= f.text_field :fg %><br />
+	<%= f.label :abv %>
+	<%= f.text_field :abv %><br />
+	<%= f.label :dateBrewed %>
+	<%= f.date_field :dateBrewed %><br />
+	<%= f.label :dateBottled %>
+	<%= f.date_field :dateBottled %><br />
+	<%= f.label :priming %>
+	<%= f.text_field :priming %><br />
+	<%= f.label :rating %>
+	<%= f.text_field :rating %><br />
+	<%= f.label :brewerComment %>
+	<%= f.text_field :brewerComment %><br />
+
+	<%= f.submit %>
+<% end %>	
+<br />
+<%= link_to "Back to list of beers", beers_path %>

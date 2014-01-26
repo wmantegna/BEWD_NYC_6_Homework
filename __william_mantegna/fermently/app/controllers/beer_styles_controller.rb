@@ -1,11 +1,13 @@
 class BeerStylesController < ApplicationController
   
+  before_action :set_beer_style, only: [:show, :edit, :update, :destroy]
+
   def index
-  	@beerStyles = BeerStyle.all
+  	@beerStyles = BeerStyle.all.order("lower(name) asc")
   end
 
   def show
-  	@beerStyle = BeerStyle.find(params[:id])
+    @beers = @beerStyle.beers.order(rating: :desc)
   end
 
   def new
@@ -24,24 +26,24 @@ class BeerStylesController < ApplicationController
   end
 
   def edit
-  	@beerStyle = BeerStyle.find(params[:id])
   end
 
   def update
-  	@beerStyle = BeerStyle.find(params[:id])
   	@beerStyle.update_attributes(beer_style_params)
   	redirect_to "/beer_styles/#{@beerStyle.id}"
   end
 
   def destroy
-  	@beerStyle = BeerStyle.find(params[:id])
   	@beerStyle.destroy
-
   	redirect_to beer_styles_path
   end
 
   private
   def beer_style_params
   	params.require(:beer_style).permit(:name, :category, :description, :abvMin, :abvMax, :ibuMin, :ibuMax, :ogMin, :ogMax, :fgMin, :fgMax, :srmMin, :srmMax)
+  end
+
+  def set_beer_style
+    @beerStyle = BeerStyle.find(params[:id])
   end
 end

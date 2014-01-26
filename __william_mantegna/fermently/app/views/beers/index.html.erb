@@ -1,6 +1,6 @@
 <h1>Beers#index</h1>
 <p>Find me in app/views/beers/index.html.erb</p>
-<table>
+<table cellpadding="5" border="1">
 	<tr>
 		<th>Name</th>
 		<th>Style</th>
@@ -25,9 +25,13 @@
 		<td><%= b.priming %></td>
 		<td><%= b.rating %></td>
 		<td>
+			<%= link_to "Show", beer_path(b) %> | 
+			<%= link_to "Edit", edit_beer_path(b) %> | 
+			<%= link_to "Delete", b, method: :delete %>
 		</td>
 	</tr>
 <% end %>
 </table>
 
-<%= link_to "Add a beer", new_beer_path %>
+<p><%= link_to "Add a beer", new_beer_path %></p>
+<p><%= link_to "View Beer Styles", beer_styles_path %></p>

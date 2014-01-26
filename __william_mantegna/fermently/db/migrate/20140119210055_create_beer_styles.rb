@@ -14,7 +14,7 @@ class CreateBeerStyles < ActiveRecord::Migration
       t.float :fgMax
       t.float :srmMin
       t.float :srmMax
-
+      
       t.timestamps
     end
   end

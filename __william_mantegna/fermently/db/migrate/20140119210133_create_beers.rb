@@ -12,7 +12,7 @@ class CreateBeers < ActiveRecord::Migration
       t.string :recipe
       t.float :rating
       t.text :brewerComment
-
+      
       t.timestamps
     end
   end

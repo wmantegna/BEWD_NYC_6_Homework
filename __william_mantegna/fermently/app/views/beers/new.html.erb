@@ -5,18 +5,20 @@
 	<%= f.text_field :name %><br />
 
 	<%= f.label :beer_style %>
-	<%= select("beer", "beer_style", BeerStyle.all.collect { |bs| [bs.name, bs.id] } ) %><br />
-
+	
+	<%= f.collection_select :beer_style_id, BeerStyle.all, :id, :name, prompt: "Beer Style" %><br />
 	<%= f.label :recipe %>
 	<%= f.text_field :recipe %><br />
 	<%= f.label :og %>
+	<%= f.text_field :og %><br />
+	<%= f.label :fg %>
 	<%= f.text_field :fg %><br />
 	<%= f.label :abv %>
 	<%= f.text_field :abv %><br />
 	<%= f.label :dateBrewed %>
-	<%= f.text_field :dateBrewed %><br />
+	<%= f.date_field :dateBrewed %><br />
 	<%= f.label :dateBottled %>
-	<%= f.text_field :dateBottled %><br />
+	<%= f.date_field :dateBottled %><br />
 	<%= f.label :priming %>
 	<%= f.text_field :priming %><br />
 	<%= f.label :rating %>
@@ -26,5 +28,4 @@
 
 	<%= f.submit %>
 <% end %>
-<br />
-<%= link_to "To Beers homepage", beers_path %>
+<p><%= link_to "Back To List of Beers", beers_path %></p>

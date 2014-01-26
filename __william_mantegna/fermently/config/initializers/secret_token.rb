@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Fermently::Application.config.secret_key_base = 'af391b8b83b64419d2510c3153c7a3eae5026e4ee9a8e1f123b7a9da024c18f0f6079009dfcb2e352fdc8d4f7d03b50b72184d540cb892be84eb1ce9027fd4bf'
+Fermently::Application.config.secret_key_base = '5faa709ae077db83bd7a5c6ac5907c91f060b8d83b015d8e217cc1ad69ca49fb825cc0818d19230eb74090c690aaea8af3a02dc50af8d87e7c46fb97f173d4e1'

@@ -1,7 +1,7 @@
 <h1>BeerStyles#index</h1>
 <p>Find me in app/views/beer_styles/indexs.html.erb</p>
 
-<table>
+<table border="1" cellpadding="5">
 	<tr>
 		<th>Name</th>
 		<th>Category</th>
@@ -24,10 +24,12 @@
 		<td><%= bs.created_at %></td>
 		<td><%= bs.updated_at %></td>
 		<td>
-			<%= link_to "Show", beer_style_path(bs) %> 
-			<%= link_to "Edit", edit_beer_style_path(bs) %> 
+			<%= link_to "Show", beer_style_path(bs) %> | 
+			<%= link_to "Edit", edit_beer_style_path(bs) %> | 
 			<%= link_to "Destroy", beer_style_path(bs), method: :delete, data: {confirm: "Are you sure?"} %>
 		</td>
 	</tr>
 <% end %>
-<%= link_to "Add a Beer Style", new_beer_style_path %>
+</table>
+<p><%= link_to "Add a Beer Style", new_beer_style_path %></p>
+<p><%= link_to "View List of Beers", beers_path %></p>

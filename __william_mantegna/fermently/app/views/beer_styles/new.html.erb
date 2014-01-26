@@ -1,6 +1,6 @@
 <h1>Add a Beer Style</h1>
 
-<%= form_for @BeerStyle do |f| %>
+<%= form_for @beerStyle do |f| %>
 	<%= f.label :name %>
 	<%= f.text_field :name %><br />
 
@@ -43,3 +43,5 @@
 
 	<%= f.submit %>
 <% end %>
+
+<p><%= link_to "Back to list of Beer Styles", beer_styles_path %></p>
